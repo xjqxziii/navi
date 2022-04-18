@@ -1,0 +1,23 @@
+
+7-Zip [32] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=C,Utf16=off,HugeFiles=on,32 bits,4 CPUs LE)
+
+Scanning the drive for archives:
+1 file, 3497343049 bytes (3336 MiB)
+
+Extracting archive: /media/sda1/onecloud/tddownload/video141.7z
+--
+Path = /media/sda1/onecloud/tddownload/video141.7z
+Type = 7z
+Physical Size = 3497343049
+Headers Size = 955
+Method = LZMA2:26 LZMA:20 BCJ2
+Solid = +
+Blocks = 2
+
+
+Archives with Errors: 1
+
+
+
+Break signaled

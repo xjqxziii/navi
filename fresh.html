@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>hello</title>
+</head>
+
+<body>
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script>
+    function check() {
+        $.ajax({
+            type: "GET",
+            url: "./demo.php",
+            dataType: "json",
+            success: function(data) {
+                if (data.success) {
+                    var count = data.info.length;
+                    for (i = 0; i < count; i++) {
+                        var dom = "<tr align='center' id='" + data.info[i].id + "'><td>" + data.info[i].id + "</td><td>" + data.info[i].name + "</td></tr>";
+                        var tag = '#' + data.info[i].id;
+                        if (!$(tag).length) {
+                            $("#info").append(dom);
+                        }
+                    }
+                } else {
+                    alert('error');
+                }
+            },
+            error: function(res) {
+                alert(res.status);
+            }
+        });
+    }
+    window.setInterval(check, 1000); //每秒执行一次
+    </script>
+
+    <body>
+        <div style='width:600px;margin:0 auto;'>
+            <table border='1' width="600px">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                    </tr>
+                </thead>
+                <tbody id='info'>
+                    <tr align='center' id='111'>
+                        <td>111</td>
+                        <td>测试</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+
+</html>
